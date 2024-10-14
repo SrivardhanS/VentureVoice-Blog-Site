@@ -1,4 +1,4 @@
-# 🚀 Building a Full-Stack Blog Platform with React and SQL for Startups
+# 🚀 VentureVoice - A Full-Stack Blog Platform developed using ReactJS, Node.js, Express, and SQL, designed for sharing startup news and blogs.
 
 In today’s startup ecosystem, a robust content platform can set you apart. Here’s a quick rundown of building a full-stack blog platform using **React**, **MySQL**, and **Express**, which is flexible, scalable, and allows users to create dynamic, engaging content.
 
