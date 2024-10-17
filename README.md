@@ -23,7 +23,11 @@ The backend uses **Express** to interact with **MySQL**.
 
 ## 🔐 Authentication Flow:
 
-`JWT` is used for authentication and authorization. Once logged in, the user’s `JWT token` is stored in cookies 🍪. This token confirms the user's identity and controls access to edit/delete functions. User data like email, id, and username are stored in `localStorage` to manage session states across components.
+JWT (JSON Web Token) is utilized for both authentication and authorization. Upon a successful login, the user's JWT token is securely stored in **HttpOnly cookies** 🍪, ensuring that the token is inaccessible to client-side JavaScript, which helps prevent **XSS (Cross-Site Scripting) attacks**. The token confirms the user's identity and grants access to sensitive actions such as editing or deleting data, while also ensuring secure transmission over **HTTPS**.
+
+To efficiently manage session states across components, **non-sensitive user data** like `email`, `ID`, and `username` are stored in `localStorage`. This approach minimizes security risks, as the actual token handling and authorization logic remain protected, with the JWT securely stored in cookies.
+
+This strategy streamlines session management, enabling a smooth user experience while maintaining strong security controls.
 
 ## 🔒 Security & Data Management:
 
